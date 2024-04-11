@@ -21,14 +21,14 @@ import lombok.ToString;
 public class PetStore {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	long petStoreId;
+	private Long petStoreId;
 	
-	String petStoreName;
-	String petStoreAddress;
-	String petStoreCity;
-	String petStoreState;
-	String petStoreZip;
-	String petStorePhone;
+	private String petStoreName;
+	private String petStoreAddress;
+	private String petStoreCity;
+	private String petStoreState;
+	private String petStoreZip;
+	private String petStorePhone;
 
 	@EqualsAndHashCode.Exclude
 	@ToString.Exclude

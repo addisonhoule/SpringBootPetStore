@@ -13,15 +13,15 @@ import pet.store.entity.PetStore;
 @NoArgsConstructor
 public class PetStoreData {
 
-	Long petStoreId;
-	String petStoreName;
-	String petStoreAddress;
-	String petStoreCity;
-	String petStoreState;
-	String petStoreZip;
-	String petStorePhone;
-	Set <PetStoreCustomer> customers = new HashSet<>();
-	Set <PetStoreEmployee> employees = new HashSet<>();
+	private Long petStoreId;
+	private String petStoreName;
+	private String petStoreAddress;
+	private String petStoreCity;
+	private String petStoreState;
+	private String petStoreZip;
+	private String petStorePhone;
+	private Set <PetStoreCustomer> customers = new HashSet<>();
+	private Set <PetStoreEmployee> employees = new HashSet<>();
 
 	// create a constructor that takes PetStore as a parameter. Set all matching fields in PetStoreData class
 	public PetStoreData(PetStore petStore) {
@@ -47,10 +47,10 @@ public class PetStoreData {
 	@NoArgsConstructor
 	public static class PetStoreCustomer {
 			
-		Long customerId;
-		String customerFirstName;
-		String customerLastName;
-		String customerEmail;
+		private Long customerId;
+		private String customerFirstName;
+		private String customerLastName;
+		private String customerEmail;
 		
 		public PetStoreCustomer(Customer customer) {
 			customerId = customer.getCustomerId();
@@ -64,11 +64,11 @@ public class PetStoreData {
 	@NoArgsConstructor
 	public static class PetStoreEmployee {
 
-		Long employeeId;
-		String employeeFirstName;
-		String employeeLastName;
-		String employeePhone;
-		String employeeJobTitle;
+		private Long employeeId;
+		private String employeeFirstName;
+		private String employeeLastName;
+		private String employeePhone;
+		private String employeeJobTitle;
 		
 		public PetStoreEmployee(Employee employee) {
 			employeeId = employee.getEmployeeId();

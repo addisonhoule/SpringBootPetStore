@@ -35,6 +35,12 @@ public class GlobalErrorHandler {
 	public ExceptionMessage handleNoSuchElementException(NoSuchElementException ex, WebRequest webRequest) {
 		return buildExceptionMessage(ex, HttpStatus.NOT_FOUND, webRequest, LogStatus.MESSAGE_ONLY);
 	}
+	
+	@ExceptionHandler(IllegalArgumentException.class)
+	@ResponseStatus(code = HttpStatus.BAD_REQUEST)
+	public ExceptionMessage handleIllegalArgumentException(IllegalArgumentException ex, WebRequest webrequest) {
+		return buildExceptionMessage(ex, HttpStatus.BAD_REQUEST, webrequest, LogStatus.MESSAGE_ONLY);
+	}
 
 	private ExceptionMessage buildExceptionMessage(Exception ex, HttpStatus status,
 			WebRequest webRequest, LogStatus logStatus) {
